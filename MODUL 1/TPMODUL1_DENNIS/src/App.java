@@ -5,15 +5,15 @@ import java.util.Scanner;
 class Bank {
     private List<Account> accounts = new ArrayList<>();
 
-    public void addAccount(Account account) {
+    public void AddAcc(Account account) {
         accounts.add(account);
     }
 
-    public void removeAccount(String accountN) {
+    public void RemAcc(String accountN) {
         accounts.removeIf(account -> account.getaccountN().equals(accountN));
     }
 
-    public Account getAccount(String accountN) {
+    public Account GetAcc(String accountN) {
         for (Account account : accounts) {
             if (account.getaccountN().equals(accountN)) {
                 return account;
@@ -79,9 +79,9 @@ public class App {
         Bank bank = new Bank();
         String option;
 
-        bank.addAccount(new Account("1", "Dennis Muladi", 1900000));
-        bank.addAccount(new Account("2", "Dennis The Menace", 2000000));
-        bank.addAccount(new Account("3", "Dennis The Lord", 6900000));
+        bank.AddAcc(new Account("1", "Dennis Muladi", 1900000));
+        bank.AddAcc(new Account("2", "Dennis The Menace", 2000000));
+        bank.AddAcc(new Account("3", "Dennis The Lord", 6900000));
 
         System.out.println("Select 1/2/3/4/5/6/0: ");
         System.out.println("1. Add Account");
@@ -104,17 +104,17 @@ public class App {
                     System.out.println("Enter Initial Balance: ");
                     double balance = scanner.nextDouble();
                     scanner.nextLine();
-                    bank.addAccount(new Account(accountN, name, balance));
+                    bank.AddAcc(new Account(accountN, name, balance));
                     break;
                 case "2":
                     System.out.println("Enter Account Number to Remove: ");
                     accountN = scanner.nextLine();
-                    bank.removeAccount(accountN);
+                    bank.RemAcc(accountN);
                     break;
                 case "3":
                     System.out.println("Enter Account Number to Get: ");
                     accountN = scanner.nextLine();
-                    Account account = bank.getAccount(accountN);
+                    Account account = bank.GetAcc(accountN);
                     if (account != null) {
                         System.out.println("Account Number: " + account.getaccountN());
                         System.out.println("Name: " + account.getName());
@@ -137,7 +137,7 @@ public class App {
                     System.out.println("Enter Deposit Amount: ");
                     double amount = scanner.nextDouble();
                     scanner.nextLine();
-                    account = bank.getAccount(accountN);
+                    account = bank.GetAcc(accountN);
                     if (account != null) {
                         account.deposit(amount);
                     } else {
@@ -150,7 +150,7 @@ public class App {
                     System.out.println("Enter Withdraw Amount: ");
                     amount = scanner.nextDouble();
                     scanner.nextLine();
-                    account = bank.getAccount(accountN);
+                    account = bank.GetAcc(accountN);
                     if (account != null) {
                         account.withdraw(amount);
                     } else {

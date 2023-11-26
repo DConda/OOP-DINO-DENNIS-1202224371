@@ -25,7 +25,7 @@ public class Kendaraan {
     public String toString() {
         return "Nomor Identifikasi: " + IdefNum + "\n" + "Kecepatan Maksimum: " + MaxSpeed + " km/h" + "\n" +"Kapasitas Penumpang: " + PasCap + " orang";
     }
-    public double hitungwaktutempuh(double distance) {
+    public double travel(double distance) {
         return (distance / this.MaxSpeed);
     }
 }

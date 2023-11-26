@@ -8,7 +8,7 @@ public class Bus extends Kendaraan{
     }
 
     @Override public String toString() {
-        return "Info Bus"+ "\n" + super.toString() + "\n" + "Jumlah Pintu:" + SeatNum;
+        return "Info Bus"+ "\n" + super.toString() + "\n" + "Jumlah Tempat duduk: " + SeatNum;
     }
 
 }

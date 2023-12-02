@@ -23,7 +23,7 @@ public class TelUExpress extends Ekspedisi {
         System.out.println("TELUExpress berhasil mengantar paket dengan no resi" +resi);
     }
     // TO DO: Create 'antar' Method to send two packages
-    public void antar2(int resi_1, int resi_2) {
+    public void antar(int resi_1, int resi_2) {
         System.out.println("TELUExpress berhasil mengantar paket dengan no resi " +resi_1+ " dan " +resi_2);
     }
 }

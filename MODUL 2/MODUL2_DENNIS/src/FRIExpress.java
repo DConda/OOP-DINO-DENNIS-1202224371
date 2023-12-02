@@ -24,7 +24,7 @@ public class FRIExpress extends Ekspedisi
         System.out.println("FRIExpress berhasil mengirim paket ke tujuan " +tujuan);
     }
     // TO DO: Create 'kirim' Method to send a package to two destinations
-    public void kirim2(String tujuan_1, String tujuan_2) {
+    public void kirim(String tujuan_1, String tujuan_2) {
         System.out.println("FRIExpress berhasil mengirim paket ke tujuan " +tujuan_1+ "dan" +tujuan_2);
     }
 }
